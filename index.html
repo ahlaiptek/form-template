@@ -28,24 +28,31 @@
   <div id="root"></div>
 
   <script type="text/babel">
-    const Header = ({title, description}) => {
+    const Header = ({ title, description }) => {
 
     }
 
-    const Section = ({children}) => {
+    const Section = ({ children }) => {
       return (
         <section>
           {children}
         </section>
       )
     }
+
+    const StringAnswer = () => {
+
+    }
   </script>
 
   <script type="text/babel">
     const App = () => {
+      const [data, setData] = React.useState("");
+
       return (
         <React.Fragment>
           <h1>Hello World</h1>
+          <button type="button" class="btn btn-info">Info</button>
         </React.Fragment>
       )
     }
