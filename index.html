@@ -178,7 +178,6 @@
               <p>Template form yang terkoneksi dengan spreadsheet</p>
               <p>Untuk menggunakan silahkan lihat tutorial-tutorial berikut!</p>
               <Warning />
-
             </React.Fragment>
           )
         }
@@ -351,10 +350,25 @@
         )
       }
 
+      const Penggunaan = () => {
+        const Body = () => {
+          return (
+            <React.Fragment>
+              <p>blabla</p>
+            </React.Fragment>
+          )
+        }
+
+        return (
+          <Accordion title='#4 Penggunaan (sudah di tahap akhir)' body={<Body />} />
+        )
+      }
+
       const accordions = [
         <Tentang />,
         <MenyiapkanSpreadsheet />,
         <MenghubungkanSpreadsheet />,
+        <Penggunaan />
       ];
 
       return (
