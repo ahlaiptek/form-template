@@ -250,7 +250,15 @@
             }, 2000);
           }
 
-          const Warning = () => {
+          const Warning1 = () => {
+            return (
+              <div className='alert alert-warning' role='alert'>
+                Namun direkomendasikan mengisinya dengan nama yang sama sesuai!
+              </div>
+            )
+          }
+
+          const Warning2 = () => {
             return (
               <div className='alert alert-warning' role='alert'>
                 Mohon sesuaikan nama tab dengan variabel tersebut!
@@ -275,7 +283,10 @@
                   <span>Nantinya, akan muncul tampilan sebagai berikut:</span>
                   <Img img='2343597564' />
                 </li>
-                <li><b><i>Opsional</i></b>, nama project bisa diganti sesuka hati</li>
+                <li>
+                  <span><b><i>Opsional</i></b>, nama project bisa diganti sesuka hati</span>
+                  <Warning1 />
+                  </li>
                 <li>
                   <span>Silahkan copy sebuah script dengan menekan tombol </span>
                   {alert && <Alert />}
@@ -284,7 +295,7 @@
                 <li>
                   <span>Lalu paste pada tampilan tadi</span>
                   <Img img='4607748788' />
-                  <Warning />
+                  <Warning2 />
                 </li>
                 <li>
                   <span>Lalu tekan save</span>
