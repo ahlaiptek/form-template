@@ -39,7 +39,7 @@
 
       const handleSubmit = (e) => {
         e.preventDefault();
-        setIsSubmitting(true); // Set isSubmitting true saat form mulai dikirim
+        setIsSubmitting(true);
 
         const formData = new FormData(e.target);
 
@@ -50,7 +50,7 @@
             setIsMessage(true);
             setType('success');
             setMessage('Data berhasil dikirim');
-            setIsSubmitting(false); // Set isSubmitting false setelah pengiriman berhasil
+            setIsSubmitting(false);
             console.log('Success!', response);
           })
           .catch(error => {
@@ -110,7 +110,7 @@
     const App = () => {
       return (
         <div>
-          <h1 className='text-center mt-3'>Registration Form</h1>
+          <h1 className='text-center mt-3'>Form Pendaftaran</h1>
           <FormComponent />
         </div>
       );
