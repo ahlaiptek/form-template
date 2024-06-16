@@ -145,14 +145,14 @@
         const id = Math.random()
 
         return (
-          <div class='accordion-item'>
-            <h2 class='accordion-header'>
-              <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target={'#' + id} aria-controls={id}>
+          <div className='accordion-item'>
+            <h2 className='accordion-header'>
+              <button className='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target={'#' + id} aria-controls={id}>
                 {title}
               </button>
             </h2>
-            <div id={id} class='accordion-collapse collapse' data-bs-parent='#tutorial'>
-              <div class='accordion-body'>
+            <div id={id} className='accordion-collapse collapse' data-bs-parent='#tutorial'>
+              <div className='accordion-body'>
                 {body}
               </div>
             </div>
@@ -160,11 +160,13 @@
         )
       }
 
+      const Img = ({img}) => <img src={"./img/" + img + ".png"} className="img-thumbnail" alt="..." />
+
       const Tentang = () => {
         const Body = () => {
           const Warning = () => {
             return (
-              <div class='alert alert-warning' role='alert'>
+              <div className='alert alert-warning' role='alert'>
                 Satu spreadsheet hanya bisa digunakan untuk satu penyimpanan, jadi tidak bisa
                 kustom dari beberapa tab!
               </div>
@@ -182,7 +184,7 @@
         }
 
         return (
-          <Accordion title='Tentang' body={<Body />} />
+          <Accordion title='#1 Tentang' body={<Body />} />
         )
       }
 
@@ -190,7 +192,7 @@
         const Body = () => {
           const Warning1 = () => {
             return (
-              <div class='alert alert-warning' role='alert'>
+              <div className='alert alert-warning' role='alert'>
                 Satu spreadsheet hanya bisa digunakan untuk satu penyimpanan, jadi tidak bisa
                 kustom dari beberapa tab!
               </div>
@@ -199,7 +201,7 @@
 
           const Warning2 = () => {
             return (
-              <div class='alert alert-warning' role='alert'>
+              <div className='alert alert-warning' role='alert'>
                 Penamaan pada kolom ini harus sesuai dengan <i>script</i>, yang akan dijelaskan pada bagian berikut.
               </div>
             )
@@ -211,16 +213,16 @@
                 <li>Buat spreadsheet baru, atau gunakan yang sudah ada</li>
                 <li>
                   <span>Tentukan tab yang ingin digunakan untuk penyimpanan</span>
-                  <img src="./img/1668997237.png" class="img-thumbnail" alt="..." />
+                  <img src="./img/1668997237.png" className="img-thumbnail" alt="..." />
                   <Warning1 />
                 </li>
                 <li>
                   <span>Buat kolom pada tab pertama dengan tulisan <i>timestamp</i></span>
-                  <img src="./img/0769902643.png" class="img-thumbnail" alt="..." />
+                  <img src="./img/0769902643.png" className="img-thumbnail" alt="..." />
                 </li>
                 <li>
                   <span>Silahkan isi kolom selanjutnya sesuai keinginan</span>
-                  <img src="./img/0655020701.png" class="img-thumbnail" alt="..." />
+                  <img src="./img/0655020701.png" className="img-thumbnail" alt="..." />
                   <Warning2 />
                 </li>
               </ol>
@@ -229,7 +231,7 @@
         }
 
         return (
-          <Accordion title='Menyiapkan Spreadsheet' body={<Body />} />
+          <Accordion title='#2 Menyiapkan Spreadsheet' body={<Body />} />
         )
       }
 
@@ -239,7 +241,7 @@
 
           const Alert = () => {
             return (
-              <div class='alert alert-success' role='alert'>
+              <div className='alert alert-success' role='alert'>
                 Berhasil
               </div>
             )
@@ -256,7 +258,7 @@
 
           const Warning = () => {
             return (
-              <div class='alert alert-warning' role='alert'>
+              <div className='alert alert-warning' role='alert'>
                 Mohon sesuaikan nama tab dengan variabel tersebut!
               </div>
             )
@@ -267,11 +269,11 @@
               <ol>
                 <li>
                   <span>Klik <i>Ekstensi</i>, lalu <i>Apps Script</i></span>
-                  <img src="./img/1278865118.png" class="img-thumbnail" alt="..." />
+                  <img src="./img/1278865118.png" className="img-thumbnail" alt="..." />
                   <span>Nantinya, akan muncul tampilan sebagai berikut:</span>
-                  <img src="./img/2343597564.png" class="img-thumbnail" alt="..." />
+                  <img src="./img/2343597564.png" className="img-thumbnail" alt="..." />
                 </li>
-                <li><i>Opsional</i>, nama project bisa diganti sesuka hati</li>
+                <li><b><i>Opsional</i></b>, nama project bisa diganti sesuka hati</li>
                 <li>
                   <span>Silahkan copy sebuah script dengan menekan tombol </span>
                   {alert && <Alert />}
@@ -279,20 +281,20 @@
                 </li>
                 <li>
                   <span>Lalu paste pada tampilan tadi</span>
-                  <img src="./img/4607748788.png" class="img-thumbnail" alt="..." />
+                  <img src="./img/4607748788.png" className="img-thumbnail" alt="..." />
                   <Warning />
                 </li>
                 <li>
                   <span>Lalu tekan save</span>
-                  <img src="./img/0010050056.png" class="img-thumbnail" alt="..." />
+                  <img src="./img/0010050056.png" className="img-thumbnail" alt="..." />
                 </li>
                 <li>
                   <span>Lalu klik tombol berikut</span>
-                  <img src="./img/5755581513.png" class="img-thumbnail" alt="..." />
+                  <img src="./img/5755581513.png" className="img-thumbnail" alt="..." />
                 </li>
                 <li>
                   <span>Lalu klik tombol berikut untuk menjalankan</span>
-                  <img src="./img/8467744180.png" class="img-thumbnail" alt="..." />
+                  <img src="./img/8467744180.png" className="img-thumbnail" alt="..." />
                 </li>
               </ol>
             </React.Fragment>
@@ -300,7 +302,7 @@
         }
 
         return (
-          <Accordion title='Menghubungkan Spreadsheet' body={<Body />} />
+          <Accordion title='#3 Menghubungkan Spreadsheet' body={<Body />} />
         )
       }
 
@@ -311,28 +313,28 @@
       ];
 
       return (
-        <section class='accordion' id='tutorial'>
+        <section className='accordion' id='tutorial'>
           {accordions.map((e, i) => e)}
-          <div class='accordion-item'>
-            <h2 class='accordion-header'>
-              <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo'>
+          <div className='accordion-item'>
+            <h2 className='accordion-header'>
+              <button className='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo'>
                 Accordion Item #2
               </button>
             </h2>
-            <div id='collapseTwo' class='accordion-collapse collapse' data-bs-parent='#tutorial'>
-              <div class='accordion-body'>
+            <div id='collapseTwo' className='accordion-collapse collapse' data-bs-parent='#tutorial'>
+              <div className='accordion-body'>
                 <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
               </div>
             </div>
           </div>
-          <div class='accordion-item'>
-            <h2 class='accordion-header'>
-              <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree'>
+          <div className='accordion-item'>
+            <h2 className='accordion-header'>
+              <button className='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree'>
                 Accordion Item #3
               </button>
             </h2>
-            <div id='collapseThree' class='accordion-collapse collapse' data-bs-parent='#tutorial'>
-              <div class='accordion-body'>
+            <div id='collapseThree' className='accordion-collapse collapse' data-bs-parent='#tutorial'>
+              <div className='accordion-body'>
                 <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
               </div>
             </div>
