@@ -185,9 +185,23 @@
         )
       }
 
+      const MenghubungkanSpreadsheet = () => {
+        const Body = () => {
+          return (
+            <React.Fragment>
+            </React.Fragment>
+          )
+        }
+
+        return (
+          <Accordion title='Menghubungkan Spreadsheet' body={<Body />} />
+        )
+      }
+
       const accordions = [
         <Tentang />,
         <MenyiapkanSpreadsheet />,
+        <MenghubungkanSpreadsheet />,
       ];
 
       return (
