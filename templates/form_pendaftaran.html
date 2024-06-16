@@ -20,6 +20,14 @@
 
   <div id='root'></div>
 
+  <script>
+    const getFormData = object => {
+      const formData = new FormData();
+      Object.keys(object).forEach(key => formData.append(key, object[key]));
+      return formData;
+    }
+  </script>
+
   <script type='text/babel'>
     const FormComponent = () => {
       const { useState } = React;
@@ -47,7 +55,7 @@
                 {message}
               </div>
             );
-          case'success':
+          case 'success':
             return (
               <div className='alert alert-success' role='alert'>
                 {message}
@@ -66,16 +74,16 @@
         e.preventDefault();
         setIsSubmitting(true);
 
-        fetch('https://jsonplaceholder.typicode.com/todos/1')
-          .then(response => response.json())
-          .then(json => {
-            console.log(json)
+        const url = 'https://script.google.com/macros/s/AKfycbyZSXWt4z_FdrQcOfgGE18w3v28R2iTnhyAoAcL9PgcQVnN29C1hMWjLENCavhUpRVm/exec'
+        fetch(url, { method: 'POST', body: getFormData(formData) })
+          .then(response => {
             setIsSubmitting(false);
-
             setIsMessage(true);
             setType('success');
             setMessage('Data berhasil dikirim');
-          });
+            console.log('Success!', response)
+          })
+          .catch(error => console.error('Error!', error.message))
       };
 
       return (
