@@ -160,7 +160,7 @@
         )
       }
 
-      const Img = ({img}) => <img src={"./img/" + img + ".png"} className="img-thumbnail" alt="..." />
+      const Img = ({ img }) => <img src={"./img/" + img + ".png"} className="img-thumbnail" alt="..." />
 
       const Tentang = () => {
         const Body = () => {
@@ -264,6 +264,14 @@
             )
           }
 
+          const Info = () => {
+            return (
+              <div className='alert alert-info' role='alert'>
+                Bagian ini izin tidak saya tambahkan gambar pendukung 😗
+              </div>
+            )
+          }
+
           return (
             <React.Fragment>
               <ol>
@@ -307,6 +315,10 @@
                 <li>
                   <span>Lalu akan muncul popup, atur sehingga seperti pada gambar</span>
                   <Img img="8881625706" />
+                </li>
+                <li>
+                  <span>Lalu akan muncul popup konfirmasi login account <u>dan tenang ini tidak membahayakan</u></span>
+                  <Info />
                 </li>
               </ol>
             </React.Fragment>
