@@ -254,6 +254,14 @@
             }, 2000);
           }
 
+          const Warning = () => {
+            return (
+              <div class='alert alert-warning' role='alert'>
+                Mohon sesuaikan nama tab dengan variabel tersebut!
+              </div>
+            )
+          }
+
           return (
             <React.Fragment>
               <ol>
@@ -272,6 +280,7 @@
                 <li>
                   <span>Lalu paste pada tampilan tadi</span>
                   <img src="./img/4607748788.png" class="img-thumbnail" alt="..." />
+                  <Warning />
                   </li>
               </ol>
             </React.Fragment>
