@@ -143,11 +143,19 @@
 
       const MenyiapkanSpreadsheet = () => {
         const Body = () => {
-          const Warning = () => {
+          const Warning1 = () => {
             return (
               <div class='alert alert-warning' role='alert'>
                 Satu spreadsheet hanya bisa digunakan untuk satu penyimpanan, jadi tidak bisa
                 kustom dari beberapa tab!
+              </div>
+            )
+          }
+
+          const Warning2 = () => {
+            return (
+              <div class='alert alert-warning' role='alert'>
+                Penamaan pada kolom ini harus sesuai dengan <i>script</i>, yang akan dijelaskan pada bagian berikut.
               </div>
             )
           }
@@ -157,10 +165,16 @@
               <ol>
                 <li>Buat spreadsheet baru, atau gunakan yang sudah ada</li>
                 <li>Tentukan tab yang ingin digunakan untuk penyimpanan</li>
-                <li>Buat kolom pada tab pertama dengan tulisan <i>timestamp</i></li>
-                <li>Silahkan isi kolom selanjutnya sesuai keinginan</li>
-                <Warning />
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ea accusantium enim obcaecati placeat nemo labore aperiam laboriosam harum pariatur repellendus vero, quas nisi similique explicabo, qui a, eveniet in?</li>
+                <Warning1 />
+                <li>
+                  <span>Buat kolom pada tab pertama dengan tulisan <i>timestamp</i></span>
+                  <img src="./img/0769902643.png" class="img-thumbnail" alt="..." />
+                </li>
+                <li>
+                  <span>Silahkan isi kolom selanjutnya sesuai keinginan</span>
+                  <img src="./img/0655020701.png" class="img-thumbnail" alt="..." />
+                  <Warning2 />
+                </li>
               </ol>
             </React.Fragment>
           )
