@@ -370,11 +370,26 @@
         )
       }
 
+      const FAQ = () => {
+        const Body = () => {
+          return (
+            <React.Fragment>
+              <p>blabla</p>
+            </React.Fragment>
+          )
+        }
+
+        return (
+          <Accordion title='#5 FAQ' body={<Body />} />
+        )
+      }
+
       const accordions = [
         <Tentang />,
         <MenyiapkanSpreadsheet />,
         <MenghubungkanSpreadsheet />,
-        <Penggunaan />
+        <Penggunaan />,
+        <FAQ />
       ];
 
       return (
