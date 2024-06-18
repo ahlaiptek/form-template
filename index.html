@@ -286,7 +286,7 @@
                 <li>
                   <span><b><i>Opsional</i></b>, nama project bisa diganti sesuka hati</span>
                   <Warning1 />
-                  </li>
+                </li>
                 <li>
                   <span>Silahkan copy sebuah script dengan menekan tombol </span>
                   {alert && <Alert />}
@@ -356,11 +356,55 @@
         )
       }
 
+      // 4e2853de-a48c-50ba-80d4-d1bdf09ab434
+
       const Penggunaan = () => {
         const Body = () => {
+          const Info = () => {
+            return (
+              <div className='alert alert-info' role='alert'>
+                <ul>
+                  <li>Hasil copy-an bisa kita simpan terlebih dahulu, karena akan dibutuhkan nantinya</li>
+                  <li>Namun tenang, apa yang dicopy ini tidak akan hilang</li>
+                  <li>Jika terjadi kehilangan maka ikuti langkah berikut:
+                    <ul>
+                      <li><Img img='6132b429-6cae-5031-9227-57e06f7994e9' /></li>
+                      <li><Img img='7936a3d9-9c79-5e38-b3b5-9d40a8b2056f' /></li>
+                      <li><Img img='55e93f60-5530-53ca-8904-6972b29b2638' /></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            )
+          }
+
           return (
             <React.Fragment>
-              <p>blabla</p>
+              <ol>
+                <li>
+                  <span>Tampilannya seharusnya seperti ini</span>
+                  <Img img='170df6db-0ec5-5b9a-aaf5-2783801a26dd' />
+                  <span>Tinggal kita copy saya pada tulisan <i><b>Aplikasi web</b></i></span>
+                  <Img img='4e2853de-a48c-50ba-80d4-d1bdf09ab434' />
+                  <Info />
+                </li>
+                <li>
+                  <span>Lalu tentukan template yang kita inginkan, sebagai contoh di sini saya menggunakan <i><b>Form Pendaftaran</b></i></span>
+                  <Img img='7588c46f-bea8-594b-98fc-7f7692abe2c1' />
+                </li>
+                <li>
+                  <span>Lalu kita copy script dimaksud dengan menekan icon sesuai gambar</span>
+                  <Img img='605f3f82-1b0e-56d0-83b5-69bbbbc377b4' />
+                </li>
+                <li>
+                  <span>Lalu paste script tadi ke tempat yang kita inginkan, sebagai contoh saya menggunakan blogspot</span>
+                  <Img img='9d3eae5c-ff65-559b-a154-6835e90e3f1d' />
+                </li>
+                <li>
+                  <span>Lalu kita cari variabel <i>url</i>, dan kita ganti dengan url tadi</span>
+                  <Img img='b5380135-5223-5309-9e30-46b4a9de2f96' />
+                </li>
+              </ol>
             </React.Fragment>
           )
         }
