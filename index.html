@@ -196,7 +196,8 @@
           const Warning2 = () => {
             return (
               <div className='alert alert-warning' role='alert'>
-                Penamaan pada kolom ini harus sesuai dengan <i>script</i>, yang akan dijelaskan pada bagian berikut.
+                <span>Penamaan pada kolom ini harus sesuai dengan <i>script</i> baris pertama, berikut adalah gambarnya:</span>
+                <Img img='70bafbc5-80d5-5bad-b580-fb1f8c620d5b' />
               </div>
             )
           }
@@ -416,7 +417,12 @@
         const Body = () => {
           return (
             <React.Fragment>
-              <p>Bagaimana kustom</p>
+              <ul>
+                <li>
+                  <h6>Bagaimana cara kustomnya?</h6>
+                  <p>Tidak direkomendasikan kustom elemen kecuali memiliki pengetahuan HTML bagian form.</p>
+                </li>
+              </ul>
             </React.Fragment>
           )
         }
