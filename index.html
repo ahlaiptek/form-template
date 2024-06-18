@@ -433,12 +433,27 @@
         )
       }
 
+      const Changelog = () => {
+        const Body = () => {
+          return (
+            <React.Fragment>
+              <h6>Changelog</h6>
+            </React.Fragment>
+          )
+        }
+
+        return (
+          <Accordion title='#5 FAQ' body={<Body />} />
+        )
+      }
+
       const accordions = [
         <Tentang />,
         <MenyiapkanSpreadsheet />,
         <MenghubungkanSpreadsheet />,
         <Penggunaan />,
-        <FAQ />
+        <FAQ />,
+        <Changelog />
       ];
 
       return (
